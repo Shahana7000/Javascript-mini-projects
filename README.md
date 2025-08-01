@@ -1,2 +1,2 @@
 # Javascript-mini-projects
-here we can build mini project for logic building
+here we can build mini projects for logic building
