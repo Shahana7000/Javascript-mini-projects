@@ -35,8 +35,8 @@
       margin-top: 100px;
       width: 300px;
       padding: 20px;
-      border: solid 5px black;
-      background-color: blue;
+      border: solid 5px white;
+      background-color: rgb(1, 1, 19);
       margin-left: auto;
       margin-right: auto;
       border-radius: 10px;
@@ -45,16 +45,14 @@
 </head>
 <body>
   <div>
-    <button class="btn">hello</button>
     <h1 class="counter">0</h1>
     <button class="action-btn increase">Increase</button>
     <button class="action-btn decrease">Decrease</button>
-    <button class=" action-btn clear-btn">clear</button>
+    <button class="action-btn clear-btn">Clear</button>
   </div>
 
   <script>
     const counter = document.querySelector('.counter');
-    const btnHello = document.querySelector('.btn');
     const btnIncrease = document.querySelector('.increase');
     const btnDecrease = document.querySelector('.decrease');
     const btnClear = document.querySelector('.clear-btn');
@@ -65,11 +63,6 @@
       counter.innerText = count;
     };
 
-      btnHello.addEventListener('click', () => {
-      count++;
-      updateCounter();
-    });
-
     btnIncrease.addEventListener('click', () => {
       count++;
       updateCounter();
@@ -79,9 +72,10 @@
       count--;
       updateCounter();
     });
+
     btnClear.addEventListener('click', () => {
-        count = 0;
-        updateCounter();
+      count = 0;
+      updateCounter();
     });
   </script>
 </body>
