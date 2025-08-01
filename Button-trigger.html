@@ -1,27 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Trigger</title>
-</head>
-<style>
-    .btn{
-        background-color: #064008;
-        color: white;
-        height: 100px;
-        width: 200px;
-        size: 200px;
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Button Trigger</title>
+  <style>
+    .btn {
+      background-color: #000501;
+      color: white;
+      height: 100px;
+      width: 200px;
+      border: solid 5px black;
+      cursor: pointer;
+      font-size: 30px;
+      margin-bottom: 10px;
     }
-</style>
+
+    .counter {
+      font-size: 40px;
+      margin-top: 20px;
+      text-align: center;
+      color: #fff;
+    }
+
+    .action-btn {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+    }
+
+    div {
+      text-align: center;
+      margin-top: 100px;
+      width: 300px;
+      padding: 20px;
+      border: solid 5px black;
+      background-color: blue;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 10px;
+    }
+  </style>
+</head>
 <body>
+  <div>
     <button class="btn">hello</button>
-    
-</body>
-<script>
-    const button = document.querySelector('.btn');
-    button.addEventListener('click', function(){
-        console.log('button click');
+    <h1 class="counter">0</h1>
+    <button class="action-btn increase">Increase</button>
+    <button class="action-btn decrease">Decrease</button>
+  </div>
+
+  <script>
+    const counter = document.querySelector('.counter');
+    const btnHello = document.querySelector('.btn');
+    const btnIncrease = document.querySelector('.increase');
+    const btnDecrease = document.querySelector('.decrease');
+
+    let count = 0;
+
+    const updateCounter = () => {
+      counter.innerText = count;
+    };
+
+      btnHello.addEventListener('click', () => {
+      count++;
+      updateCounter();
     });
-</script>
+
+    btnIncrease.addEventListener('click', () => {
+      count++;
+      updateCounter();
+    });
+
+    btnDecrease.addEventListener('click', () => {
+      count--;
+      updateCounter();
+    });
+  </script>
+</body>
 </html>
