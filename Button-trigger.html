@@ -49,6 +49,7 @@
     <h1 class="counter">0</h1>
     <button class="action-btn increase">Increase</button>
     <button class="action-btn decrease">Decrease</button>
+    <button class=" action-btn clear-btn">clear</button>
   </div>
 
   <script>
@@ -56,6 +57,7 @@
     const btnHello = document.querySelector('.btn');
     const btnIncrease = document.querySelector('.increase');
     const btnDecrease = document.querySelector('.decrease');
+    const btnClear = document.querySelector('.clear-btn');
 
     let count = 0;
 
@@ -76,6 +78,10 @@
     btnDecrease.addEventListener('click', () => {
       count--;
       updateCounter();
+    });
+    btnClear.addEventListener('click', () => {
+        count = 0;
+        updateCounter();
     });
   </script>
 </body>
